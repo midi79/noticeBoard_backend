@@ -11,6 +11,7 @@ Java Springboot notice board and calendar web application
 
 -   Lombok
 -   JPA
+-   OpenAPI (Swagger) : http://localhost:8080/swagger-ui/index.html#/
 
 ## Database
 - MariaDB
