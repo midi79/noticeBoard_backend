@@ -1,5 +1,5 @@
-# Springboot Notice Board and Calendar
-Java Springboot notice board and calendar web application
+# Springboot Notice Board and Schedule
+Java Springboot notice board and schedule web application
 
 
 ## Screenshot
@@ -26,7 +26,7 @@ Java Springboot notice board and calendar web application
 
 -   Test
 -   Image attachment in the editor
--   Calendar
+-   Schedule
 -   Authentication
 
 ## Related source

@@ -15,6 +15,6 @@ public class SwaggerConfig {
     }
 
     private Info apiInfo() {
-        return new Info().title("Spring boot OpenAPI Swagger for Notice Board and Calendar").description("Portfolio Project").version("1.0.0");
+        return new Info().title("Spring boot OpenAPI Swagger for Notice Board and Schedule").description("Portfolio Project").version("1.0.0");
     }
 }
