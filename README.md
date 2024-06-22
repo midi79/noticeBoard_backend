@@ -13,6 +13,8 @@ Java Springboot notice board and schedule web application
 
 ## Library
 
+- Java 17
+- Spring Boot 3.3.0
 -   Lombok
 -   JPA
 -   OpenAPI (Swagger): http://localhost:8080/swagger-ui/index.html#/
