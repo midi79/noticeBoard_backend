@@ -7,11 +7,13 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
+@Repository
 public interface BoardRepository extends JpaRepository<Board, Long> {
 
     Page<Board> findAll(Pageable pageable);
@@ -41,8 +43,5 @@ public interface BoardRepository extends JpaRepository<Board, Long> {
     @Transactional
     @Query("UPDATE Board board SET board.count = board.count + 1 WHERE board.id = :id")
     void incrementCount(@Param("id") Long id);
-
-
-
 
 }

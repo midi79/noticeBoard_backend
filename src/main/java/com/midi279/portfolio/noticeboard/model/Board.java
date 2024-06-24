@@ -31,7 +31,7 @@ public class Board extends BaseTimeEntity implements Serializable {
     private String bodyContent;
 
     @Column
-    private Boolean favorite = false;
+    private Boolean favorite;
 
     @Column
     private String writer;
@@ -40,7 +40,7 @@ public class Board extends BaseTimeEntity implements Serializable {
     private String password;
 
     @Column
-    private Integer count = 0;
+    private Integer count;
 
     @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "tb_board_tag", joinColumns = @JoinColumn(name = "board_id"))
