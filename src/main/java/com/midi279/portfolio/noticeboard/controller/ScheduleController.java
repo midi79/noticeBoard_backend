@@ -38,7 +38,7 @@ public class ScheduleController {
 
     @Operation(summary = "Get all schedule between two date", description = "Get all schedule between from-date to to-date")
     @GetMapping("/month")
-    public ResponseEntity<List<ScheduleListDto>> getScheduleBetweenDate(@RequestParam String fromDate, @RequestParam String toDate) {
+    public ResponseEntity<List<ScheduleListDto>> getScheduleBetweenDate(@RequestParam("fromDate") String fromDate, @RequestParam("toDate") String toDate) {
         return ResponseEntity.ok(scheduleService.getScheduleBetweenDate(fromDate, toDate));
     }
 

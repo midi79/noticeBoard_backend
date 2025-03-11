@@ -64,7 +64,7 @@ public class BoardController {
      */
     @Operation(summary = "Get a board data with count increase", description = "Get a board data")
     @GetMapping("/{id}")
-    public ResponseEntity<BoardViewDto> getBoardById(@PathVariable Long id) {
+    public ResponseEntity<BoardViewDto> getBoardById(@PathVariable("id") Long id) {
         BoardViewDto boardViewDto = boardService.getBoardById(id);
         return boardViewDto != null ? ResponseEntity.ok(boardViewDto) : ResponseEntity.notFound().build();
     }
@@ -76,7 +76,7 @@ public class BoardController {
      */
     @Operation(summary = "Get a board data without count increase", description = "Get a board data")
     @GetMapping("/{id}/update")
-    public ResponseEntity<BoardViewDto> getBoardByIdForUpdate(@PathVariable Long id) {
+    public ResponseEntity<BoardViewDto> getBoardByIdForUpdate(@PathVariable("id") Long id) {
         BoardViewDto boardViewDto = boardService.getBoardByIdForUpdate(id);
         return boardViewDto != null ? ResponseEntity.ok(boardViewDto) : ResponseEntity.notFound().build();
     }
@@ -101,7 +101,7 @@ public class BoardController {
      */
     @Operation(summary = "Delete board data", description = "Delete one board data")
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<Void> deleteBoard(@PathVariable Long id) {
+    public ResponseEntity<Void> deleteBoard(@PathVariable("id") Long id) {
         boardService.deleteBoard(id);
         return ResponseEntity.noContent().build();
     }
@@ -134,7 +134,7 @@ public class BoardController {
      */
     @Operation(summary = "Update the favorite value", description = "Set the favorite value for each board row.")
     @PatchMapping("/update/{boardId}/favorite")
-    public ResponseEntity<Void> updateTags(@PathVariable Long boardId, @RequestBody Boolean favorite) {
+    public ResponseEntity<Void> updateTags(@PathVariable("boardId") Long boardId, @RequestBody Boolean favorite) {
         boardService.updateBoardFavorite(boardId, favorite);
         return ResponseEntity.noContent().build();
     }
