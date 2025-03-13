@@ -150,7 +150,4 @@ public class BoardController {
         Boolean result = boardService.verifyBoardPassword(boardDto.getId(), boardDto.getPassword());
         return ResponseEntity.ok(result);
     }
-
-
-
 }
