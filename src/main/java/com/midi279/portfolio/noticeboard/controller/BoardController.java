@@ -81,7 +81,6 @@ public class BoardController {
         return boardViewDto != null ? ResponseEntity.ok(boardViewDto) : ResponseEntity.notFound().build();
     }
 
-
     /**
      * Create New Board
      * @param boardDto Board DTO
