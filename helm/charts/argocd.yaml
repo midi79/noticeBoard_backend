@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: noticeboard-backend
+  namespace: argocd
+spec:
+  project: noticeboard
+  source:
+    repoURL: https://github.com/midi79/noticeBoard_backend.git
+    targetRevision: main
+    path: helm
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: noticeboard
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
